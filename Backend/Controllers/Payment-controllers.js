@@ -64,6 +64,7 @@ catch(err){
     } 
 }
 
+    // const myKey = process.env.RAZORPAY_API_KEY
 exports.keyfunction =async(req,res)=>{
     try{
      res.status(200).json({

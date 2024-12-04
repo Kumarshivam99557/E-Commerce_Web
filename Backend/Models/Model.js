@@ -1,10 +1,12 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const jwt = require("jsonwebtoken")
+const dotenv =require("dotenv");
 
+dotenv.config({path:"./Config/config.env"});
 
 const connection = ()=>{
-   mongoose.connect('mongodb://127.0.0.1:27017/Ecommerce-Database')
+   mongoose.connect(process.env.DB_URL)
 .then(()=>{
     console.log("database has been connected")
 }).catch((err)=>{
